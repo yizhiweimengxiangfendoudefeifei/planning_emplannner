@@ -16,3 +16,4 @@ This is an autonomous vehicle's planning algorithm. This algorithm is based on A
 这里采用数组存储笛卡尔坐标系和frenet坐标系之间的转换关系，减小计算量。  
 ![image](https://user-images.githubusercontent.com/39455551/163668400-201345f5-4545-4d4b-ad2d-cbc7ab40eb46.png)
 ### ③计算规划起点  
+这里要注意规划起点并不是定位的坐标点直接投影得到的，要利用当前位置加0.1s（规划周期）的位置作为规划起点。同时要判断推断的车辆位置和定位的车辆位置的偏差，如果偏差大于一定值则利用车辆动力学进行外推。  
